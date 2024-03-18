@@ -27,6 +27,9 @@ mongoose.connect(config.mongoURI).then(() => console.log('MongoDB Connected...')
 //간단한 route 만듦. 
 app.get('/', (req, res) => res.send('Hello World 야호!'))
 
+app.get('/api/hello', (req,res) => {
+    res.send("안녕하세요~")
+})
 //register route
 app.post('/api/users/register', async (req, res) => {
     //회원가입 할 때 필요한 정보들을 client에서 가져오면
